@@ -122,7 +122,7 @@ How to judge:
   node definitions change they must be updated in lockstep, otherwise a case computes wrong
   addresses and passes silently.
 - Each test file is wrapped in `#if defined(RT_USING_UTEST) && defined(FDB_USING_KVDB)` (TSDB
-  likewise), and the timeout passed to `UTEST_TC_EXPORT(...)` (20 s for KVDB, 60 s for TSDB) is
+  likewise), and the timeout passed to `UTEST_TC_EXPORT(...)` (20 s for KVDB, 180 s for TSDB) is
   relied on by CI. Check whether a slow new case needs it raised.
 
 ## CI today
