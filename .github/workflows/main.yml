@@ -1,4 +1,7 @@
 name: AutoTestCI
+permissions:
+  contents: read
+
 on: [push, pull_request, workflow_dispatch]
 jobs:
   test:
@@ -13,7 +16,7 @@ jobs:
       UTEST_RUNNER_PATH: ../UtestRunner
       RTT_EXEC_PATH: /opt/gcc-arm-none-eabi-10-2020-q4-major/bin
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v7
     - name: Configure Git safe directory
       run: git config --global --add safe.directory '*'
     - name: Prepare env
